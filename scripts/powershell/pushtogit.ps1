@@ -1,3 +1,9 @@
-git add .
-git commit -m "Updating Github"
-git push
+
+function pushtogit
+{
+    git add .
+    git commit -m $args[0]
+    git push
+}
+# args is short for arguments
+pushtogit $args[0]
