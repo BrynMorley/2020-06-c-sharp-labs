@@ -1,5 +1,5 @@
 
-function pushtogit
+function global:pushtogit
 {
     git add .
     git commit -m $args[0]
