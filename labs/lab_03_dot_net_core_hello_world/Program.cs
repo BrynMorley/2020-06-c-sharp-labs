@@ -1,6 +1,7 @@
 ﻿#define RUNNINGTEST01
 using System;
 using System.Diagnostics;
+using System.Threading.Tasks;
 
 namespace lab_03_dot_net_core_hello_world
 {
@@ -39,6 +40,8 @@ namespace lab_03_dot_net_core_hello_world
             Trace.WriteLine("Output to trace console");
 
             Console.ReadLine();
+
+            //TODO: Code this later Bryn
         }
     }
 }
