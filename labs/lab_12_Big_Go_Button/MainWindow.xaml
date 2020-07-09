@@ -5,8 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:lab_12_Big_Go_Button"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" Background="BlanchedAlmond">
     <Grid>
-
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Label x:Name="label_Timer" Grid.Column="1" Grid.Row="0" Background="White" Content="00:00" FontSize="75" HorizontalContentAlignment="Right"/>
+        <Button x:Name="button_Go" Grid.Column="1" Grid.Row="1" Content="GO" FontSize="75" FontWeight="Bold" Background="#a10d19" Click="button_Go_Click"/>
     </Grid>
 </Window>
