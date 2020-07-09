@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 
 namespace lab_13_operators
 {
@@ -50,7 +51,12 @@ namespace lab_13_operators
             }
             */
 
-            Console.WriteLine(1^1);
+            //int x = 3;
+            //int y = -2;
+            //Console.WriteLine(x=+y);
+
+            int a = 5, b = 3, c = 4;
+            c += +a++ + ++b;
         }
     }
 }
