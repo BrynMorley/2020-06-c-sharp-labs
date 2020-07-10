@@ -23,7 +23,7 @@ namespace SelectionExercisesLib
         {
             if (age < 0)
             { 
-                throw new System.ArgumentException("Age can't be below 0.","orignal");
+                throw new       ArgumentException("Age can't be below 0.","orignal");
             }
             if (age < 5)
             {
@@ -45,11 +45,6 @@ namespace SelectionExercisesLib
             {
                 return "OAP";
             }
-
-
-            
-
-            return string.Empty;
         }
     }
 }
