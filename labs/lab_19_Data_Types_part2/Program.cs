@@ -62,8 +62,7 @@ namespace lab_19_Data_Types_part2
             
             var rand = new Random();
             Suit theSuit = Suit.HEARTS;
-            // int suit = (int)theSuit;
-            //Console.WriteLine(suit);
+       
             for (int i = 0; i < 10; i++)
             {
                 int suitNum = rand.Next(1, 5);
@@ -105,12 +104,7 @@ namespace lab_19_Data_Types_part2
             
             #endregion
 
-            /*
-            dynamic item = 100;
-            Console.WriteLine($"adding 10 to {item} gives {item+10}");
-            item = "Hello";
-            Console.WriteLine($"adding 10 to {item} gives {item + 10}");
-            */
+     
         }
 
         public enum Suit
