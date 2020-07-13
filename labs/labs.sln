@@ -33,13 +33,21 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_15_Unit_Testing", "lab_
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lab_15_methods_test", "Lab_15_methods_test\Lab_15_methods_test.csproj", "{E4839BBD-9DBD-426C-B473-C74B906352FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_16_selection", "lab_16_selection\lab_16_selection.csproj", "{1E17389E-A9A5-4A73-B985-1626CCEB78E4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_16_selection", "lab_16_selection\lab_16_selection.csproj", "{1E17389E-A9A5-4A73-B985-1626CCEB78E4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_16_selection_test", "lab_16_selection_test\lab_16_selection_test.csproj", "{B6F9CD99-F2B4-40A6-923A-930EE728DC85}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_16_selection_test", "lab_16_selection_test\lab_16_selection_test.csproj", "{B6F9CD99-F2B4-40A6-923A-930EE728DC85}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_17_strings_arrays", "lab_17_strings_arrays\lab_17_strings_arrays.csproj", "{2ECF7596-03E8-4690-B136-27D78AB82DCD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_17_strings_arrays", "lab_17_strings_arrays\lab_17_strings_arrays.csproj", "{2ECF7596-03E8-4690-B136-27D78AB82DCD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_18_iterations", "lab_18_iterations\lab_18_iterations.csproj", "{59905001-F64B-4AA3-9020-8E9E5DFED7C2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_18_iterations", "lab_18_iterations\lab_18_iterations.csproj", "{59905001-F64B-4AA3-9020-8E9E5DFED7C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_19_Data_Types_part2", "lab_19_Data_Types_part2\lab_19_Data_Types_part2.csproj", "{F7B15E05-AFB8-43CA-B85C-B39A030911BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_20_Exceptions", "lab_20_Exceptions\lab_20_Exceptions.csproj", "{D7C99A84-5A7E-45EA-865B-FA2608CBC4EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_20_exception_test", "lab_20_exception_test\lab_20_exception_test.csproj", "{14B1E79D-7AD4-41F1-B2C7-EBBB06366BB5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab_21_Collections", "Lab_21_Collections\Lab_21_Collections.csproj", "{A42F9ACF-F853-40C9-8642-0E56871B2316}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -123,6 +131,22 @@ Global
 		{59905001-F64B-4AA3-9020-8E9E5DFED7C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59905001-F64B-4AA3-9020-8E9E5DFED7C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59905001-F64B-4AA3-9020-8E9E5DFED7C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7B15E05-AFB8-43CA-B85C-B39A030911BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7B15E05-AFB8-43CA-B85C-B39A030911BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7B15E05-AFB8-43CA-B85C-B39A030911BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7B15E05-AFB8-43CA-B85C-B39A030911BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7C99A84-5A7E-45EA-865B-FA2608CBC4EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7C99A84-5A7E-45EA-865B-FA2608CBC4EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7C99A84-5A7E-45EA-865B-FA2608CBC4EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7C99A84-5A7E-45EA-865B-FA2608CBC4EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14B1E79D-7AD4-41F1-B2C7-EBBB06366BB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14B1E79D-7AD4-41F1-B2C7-EBBB06366BB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14B1E79D-7AD4-41F1-B2C7-EBBB06366BB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14B1E79D-7AD4-41F1-B2C7-EBBB06366BB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A42F9ACF-F853-40C9-8642-0E56871B2316}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A42F9ACF-F853-40C9-8642-0E56871B2316}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A42F9ACF-F853-40C9-8642-0E56871B2316}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A42F9ACF-F853-40C9-8642-0E56871B2316}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
