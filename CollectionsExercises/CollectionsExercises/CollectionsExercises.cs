@@ -31,18 +31,22 @@ namespace CollectionsExercisesLib
         {
             Stack reverseStack = new Stack();
             
-            foreach (int item in original)
+       
+
+            for (int i = 0; i < original.Length; i++)
             {
-                reverseStack.Push(original[item]);
+                reverseStack.Push(original[i]);
             }
 
             int[] reversed = new int[original.Length];
             
-            for(int i = 0 ; i < reversed.Length;i++)
+            for(int i = 0 ; i < original.Length;i++)
             {
                 reversed[i] = (int) reverseStack.Pop();
             }
-            return reversed;
+
+           return reversed;
+            
         }
         // using a Dictionary, counts and returns (as a string) the occurence of the digits 0-9 in the given string
         public static string CountDigits(string input)
