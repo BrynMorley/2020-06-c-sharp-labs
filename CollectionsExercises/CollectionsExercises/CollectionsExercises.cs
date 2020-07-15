@@ -29,20 +29,22 @@ namespace CollectionsExercisesLib
         /* uses a Stack to create and return array of ints in reverse order to the one supplied */
         public static int[] Reverse(int[] original)
         {
-            Stack reverseStack = new Stack();
-            
-       
+            var reverseStack = new Stack<int>();
 
-            for (int i = 0; i < original.Length; i++)
+            //for (int i = 0; i < original.Length; i++)
+            //{
+            //    reverseStack.Push(original[i]);
+            //}
+            foreach (int item in original)
             {
-                reverseStack.Push(original[i]);
+                reverseStack.Push(item);
             }
 
             int[] reversed = new int[original.Length];
             
             for(int i = 0 ; i < original.Length;i++)
             {
-                reversed[i] = (int) reverseStack.Pop();
+                reversed[i] = reverseStack.Pop();
             }
 
            return reversed;
@@ -54,8 +56,8 @@ namespace CollectionsExercisesLib
             Dictionary<char, int> numCount = new Dictionary<char, int>();
 
             for (int i = 0; i < input.Length; i++)
-            {
-                char num = input[i];
+            {char num = input[i];
+                
                 if (char.IsDigit(num))
                 {
                     if (numCount.ContainsKey(num))

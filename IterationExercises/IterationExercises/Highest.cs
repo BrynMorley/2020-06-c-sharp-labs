@@ -7,7 +7,7 @@ namespace IterationLib
     {
         public static int HighestWhileLoop(int[] nums)
         {
-            int highestNum = 0;
+            int highestNum = int.MinValue;
             int i = 0;
             while (i<nums.Length)
             {
@@ -23,7 +23,7 @@ namespace IterationLib
 
         public static int HighestForLoop(int[] nums)
         {
-            int highestNum = 0;
+            int highestNum = int.MinValue;
             for (int i = 0; i < nums.Length; i++)
             {
                 if (nums[i]> highestNum)
@@ -36,7 +36,7 @@ namespace IterationLib
 
         public static int HighestForEachLoop(int[] nums)
         {
-            int highestNum = 0;
+            int highestNum = int.MinValue;
             foreach (var item in nums)
             {
                 if (item> highestNum)
@@ -49,7 +49,7 @@ namespace IterationLib
 
         public static int HighestDoWhileLoop(int[] nums)
         {
-            int highestNum = 0;
+            int highestNum = int.MinValue;
             int i = 0;
             do
             {
