@@ -31,5 +31,10 @@ namespace Safari_Park
         {
             return $"{_firstName} {_lastName}";
         }
+
+        public override string ToString()
+        {
+            return $"Name:{_firstName} {_lastName}  Age:{Age}";
+        }
     }
 }

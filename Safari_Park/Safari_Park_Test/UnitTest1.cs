@@ -65,12 +65,22 @@ namespace Safari_Park_Test
         [TestCase(1, 1)]
         [TestCase(3, 3)]
         [TestCase(5, 5)]
-        [TestCase(6, 5)] //fail
+        [TestCase(6, 5)] //Pass, cuz am cool 
         public void VehicleCapacityTests(int numPassengers, int expectedPassengers)
         {
             Vehicle v = new Vehicle(5);
             v.NumPassengers = numPassengers;
             Assert.AreEqual(expectedPassengers, v.NumPassengers);
+        }
+
+        [Test]
+        public void CanAttemptCaptureMonster()
+        {
+            Monster m = new Monster("Test") { IsElderDragon = false };
+            MonsterHunter mh = new MonsterHunter("First", "Last", "Cheese", "Longsword");
+            
+            string expected = $"{mh.GetFullName()} attempts to capture {m.Name} ...... and caught it!";
+            Assert.AreEqual(mh.Capture(m), expected);
         }
     }
 }
