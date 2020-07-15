@@ -50,13 +50,27 @@ namespace Safari_Park_Test
 
         [TestCase(5,5)]
         [TestCase(10,5)]
-        [TestCase(-5,0)]       
+        [TestCase(-5,0)]
+        [TestCase(4,4)]
         public void NumberOfPassangersIsWithinBounds(int passengers, int expected)
         {
-            Vehicle v = new Vehicle(5, 10);
+            Vehicle v = new Vehicle(5);
             v.NumPassengers = passengers;
             var actual = v.NumPassengers;
             Assert.AreEqual(actual,expected);
+        }
+
+        [TestCase(-1, 0)] //no. of passengers = -1, expect 0
+        [TestCase(0, 0)]
+        [TestCase(1, 1)]
+        [TestCase(3, 3)]
+        [TestCase(5, 5)]
+        [TestCase(6, 5)] //fail
+        public void VehicleCapacityTests(int numPassengers, int expectedPassengers)
+        {
+            Vehicle v = new Vehicle(5);
+            v.NumPassengers = numPassengers;
+            Assert.AreEqual(expectedPassengers, v.NumPassengers);
         }
     }
 }

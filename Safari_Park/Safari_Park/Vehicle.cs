@@ -16,7 +16,7 @@ namespace Safari_Park
         get { return _numPassengers; }
             set
             {
-                if (value >= 0)
+                if (value > 0)
                 {
                     if(value <= _capacity)
                     {
@@ -52,7 +52,7 @@ namespace Safari_Park
             _speed = 10;
         }
 
-        public Vehicle(int capacity, int speed)
+        public Vehicle(int capacity, int speed = 10)
         {
             _speed = speed;
             _capacity = capacity;
