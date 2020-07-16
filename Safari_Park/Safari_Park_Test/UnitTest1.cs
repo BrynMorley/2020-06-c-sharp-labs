@@ -77,11 +77,11 @@ namespace Safari_Park_Test
         [Test]
         public void CanAttemptCaptureMonster()
         {
-            Monster m = new Monster("Test",10) { IsElderDragon = false };
+            Monster m = new Monster("Test", 10) { IsElderDragon = false };
             MonsterHunter mh = new MonsterHunter("First", "Last", "Cheese", "Longsword");
-            
+
             string expected = $"{mh.GetFullName()} attempts to capture {m.Name} ...... and caught it!";
-            string expected2= $"{mh.GetFullName()} attempts to capture {m.Name} ...... but it escaped!";
+            string expected2 = $"{mh.GetFullName()} attempts to capture {m.Name} ...... but it escaped!";
             string actual = mh.Capture(m);
             if (actual == expected)
             {
@@ -91,7 +91,22 @@ namespace Safari_Park_Test
             {
                 Assert.AreEqual(actual, expected2);
             }
-            
+
+            //[Test]
+            //public void CanAttemptCaptureMonster()
+            //{
+            //    Monster m = new Monster("Test", 10) { IsElderDragon = false };
+            //    MonsterHunter mh = new MonsterHunter("First", "Last", "Cheese", "Longsword");
+
+            //    string expected = $"{mh.GetFullName()} attempts to capture {m.Name} ...... and caught it!";
+            //    string expected2 = $"{mh.GetFullName()} attempts to capture {m.Name} ...... but it escaped!";
+            //    string actual = mh.Capture(m);
+            //    Assert.That(actual,expected);
+            //    Assert.That( ,expected2);
+
+
+
+
         }
        [Test]
         public void AttackMonsterReportsCorrectly()
@@ -113,6 +128,64 @@ namespace Safari_Park_Test
 
             string expected = $"{mh.GetFullName()} hits {m.Name} with {w.Name} and kills it!";
             Assert.AreEqual(mh.Attack(m), expected);
+        }
+        [Test]
+
+        public void WhenMoveCalledItReturnsCorrectValueAfterAscend500andMove3Times()
+        {
+            Airplane a = new Airplane(200, 100, "JetsRUs") { NumPassengers = 150 };
+            a.Ascend(500);
+            a.Move(3);
+
+            var actual = a.Move(3);
+
+            var expected = "Moving along 3 times at an altitude of 500 metres.";
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+
+        public void ToStringCorrectWhenAscend500andMove3Times()
+        {
+            Airplane a = new Airplane(200, 100, "JetsRUs") { NumPassengers = 150 };
+            a.Ascend(500);
+            a.Move(3);
+
+            var actual = a.ToString();
+
+            var expected = "Thank you for flying JetsRUs: Safari_Park.Airplane capacity: 200 passengers: 150 speed: 100 position: 300 altitude: 500.";
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+
+        public void WhenMoveCalledItReturnsCorrectValueAfterAscend500Move3TimesDescend200()
+        {
+            Airplane a = new Airplane(200, 100, "JetsRUs") { NumPassengers = 150 };
+            a.Ascend(500);
+            a.Move(3);
+            a.Descend(200);
+
+            var actual = a.Move();
+
+            var expected = "Moving along at an altitude of 300 metres.";
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void ToStringCorrectWhenAscend500andMove3TimesDescend200ThenCallMove()
+        {
+            Airplane a = new Airplane(200, 100, "JetsRUs") { NumPassengers = 150 };
+            a.Ascend(500);
+            a.Move(3);
+            a.Descend(200);
+            a.Move();
+            a.Move();
+
+            var actual = a.ToString();
+
+            var expected = "Thank you for flying JetsRUs: Safari_Park.Airplane capacity: 200 passengers: 150 speed: 100 position: 500 altitude: 300.";
+            Assert.AreEqual(expected, actual);
         }
     }
 }
