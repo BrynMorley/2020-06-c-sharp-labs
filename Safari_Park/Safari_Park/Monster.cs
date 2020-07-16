@@ -27,9 +27,10 @@ namespace Safari_Park
             set { _isElderDragon = value; }
         }
 
-        public Monster (string name)
+        public Monster (string name,int health)
         { 
             _name = name;
+            _health = health;
         }
 
     }

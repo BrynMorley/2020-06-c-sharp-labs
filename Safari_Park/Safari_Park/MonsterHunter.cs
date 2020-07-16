@@ -41,7 +41,14 @@ namespace Safari_Park
         public string Attack(Monster monster)
         {
             monster.Health -= _weapon.Damage;
-            return $"{GetFullName()} hits {monster.Name} with {_weapon.Name} doing {_weapon.Damage} damage.";
+            if (monster.Health > 0) 
+            { 
+                return $"{GetFullName()} hits {monster.Name} with {_weapon.Name} doing {_weapon.Damage} damage.";
+            }       
+            else
+            {
+                return $"{GetFullName()} hits {monster.Name} with {_weapon.Name} and kills it!";
+            }
         }
         public override string ToString()
         {

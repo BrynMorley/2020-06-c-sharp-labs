@@ -13,13 +13,19 @@ namespace Safari_Park
             MonsterHunter Bryn = new MonsterHunter("Bryn", "Morley", "Sony",BigDoots) {Age = 24};
            // Person Nish = new Person("Nish", "Mandal") { Age = 30 };
 
-            Monster Rathalos = new Monster("Rathalos");
-            Monster Kirin = new Monster("Kirin") { IsElderDragon = true };
+            Monster Rathalos = new Monster("Rathalos",10);
+            Monster Kirin = new Monster("Kirin",25) { IsElderDragon = true };
 
 
             Console.WriteLine(Bryn);
             Console.WriteLine();
-            Console.WriteLine(Bryn.Attack(Rathalos));
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine(Bryn.Attack(Rathalos));
+            }
+            
+
+
             Console.WriteLine(Bryn.Capture(Rathalos));
             Console.WriteLine(Bryn.Capture(Kirin));
             Console.WriteLine(
