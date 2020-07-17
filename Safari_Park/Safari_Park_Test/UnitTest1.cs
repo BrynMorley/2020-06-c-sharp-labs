@@ -44,10 +44,10 @@ namespace Safari_Park_Test
             string expected2 = $"{mh.GetFullName()} attempts to capture {m.Name} ...... but it escaped!";
             string actual = mh.Capture(m);
 
-            //Assert.That(actual.Equals(expected));
-            //Assert.That(actual.Equals(expected2));
+            Assert.That(actual.Equals(expected));
+            Assert.That(actual.Equals(expected2));
             
-                Assert.AreEqual(actual, expected);
+            Assert.AreEqual(actual, expected);
             
           
             Assert.AreEqual(actual, expected2);
