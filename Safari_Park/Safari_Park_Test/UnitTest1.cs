@@ -31,6 +31,61 @@ namespace Safari_Park_Test
 
         }
 
+        
+
+        [Test]
+        public void CanAttemptCaptureMonster()
+        {
+            LaserGun w = new LaserGun("Test Weapon", "Test Weapon", 1);
+            Monster m = new Monster("Test", 10) { IsElderDragon = false };
+            MonsterHunter mh = new MonsterHunter("First", "Last", w, "Longsword");
+
+            string expected = $"{mh.GetFullName()} attempts to capture {m.Name} ...... and caught it!";
+            string expected2 = $"{mh.GetFullName()} attempts to capture {m.Name} ...... but it escaped!";
+            string actual = mh.Capture(m);
+
+            //Assert.That(actual.Equals(expected));
+            //Assert.That(actual.Equals(expected2));
+            
+                Assert.AreEqual(actual, expected);
+            
+          
+            Assert.AreEqual(actual, expected2);
+            }
+
+        [Test]
+        public void AttackMonsterReportsCorrectly()
+        {
+            LaserGun w = new LaserGun("Test Weapon", "Test Weapon", 1);
+            Monster m = new Monster("Test", 10);
+            MonsterHunter mh = new MonsterHunter("First", "Last", w, w);
+
+            string expected = $"{mh.GetFullName()} hits {m.Name} with {w.Name} doing {w.Damage} damage.";
+            Assert.AreEqual(mh.Attack(m), expected);
+        }
+
+        [Test]
+        public void WeaponWithOneDamageKills1HealthMonster()
+        {
+
+            LaserGun w = new LaserGun("Test Weapon", "Test Weapon", 1);
+            Monster m = new Monster("Test", 1);
+            MonsterHunter mh = new MonsterHunter("First", "Last", w, w);
+
+            string expected = $"{mh.GetFullName()} hits {m.Name} with {w.Name} and kills it!";
+            Assert.AreEqual(mh.Attack(m), expected);
+        }
+
+
+
+
+    }
+      
+      
+    
+
+    public class VehicleTests
+    {
         [Test]
         public void WhenADefaultVehicleMovesTwiceItsPositionIs20()
         {
@@ -49,16 +104,16 @@ namespace Safari_Park_Test
             Assert.AreEqual("Moving along", result);
         }
 
-        [TestCase(5,5)]
-        [TestCase(10,5)]
-        [TestCase(-5,0)]
-        [TestCase(4,4)]
+        [TestCase(5, 5)]
+        [TestCase(10, 5)]
+        [TestCase(-5, 0)]
+        [TestCase(4, 4)]
         public void NumberOfPassangersIsWithinBounds(int passengers, int expected)
         {
             Vehicle v = new Vehicle(5);
             v.NumPassengers = passengers;
             var actual = v.NumPassengers;
-            Assert.AreEqual(actual,expected);
+            Assert.AreEqual(actual, expected);
         }
 
         [TestCase(-1, 0)] //no. of passengers = -1, expect 0
@@ -72,62 +127,6 @@ namespace Safari_Park_Test
             Vehicle v = new Vehicle(5);
             v.NumPassengers = numPassengers;
             Assert.AreEqual(expectedPassengers, v.NumPassengers);
-        }
-
-        [Test]
-        public void CanAttemptCaptureMonster()
-        {
-            Monster m = new Monster("Test", 10) { IsElderDragon = false };
-            MonsterHunter mh = new MonsterHunter("First", "Last", "Cheese", "Longsword");
-
-            string expected = $"{mh.GetFullName()} attempts to capture {m.Name} ...... and caught it!";
-            string expected2 = $"{mh.GetFullName()} attempts to capture {m.Name} ...... but it escaped!";
-            string actual = mh.Capture(m);
-            if (actual == expected)
-            {
-                Assert.AreEqual(actual, expected);
-            }
-            else
-            {
-                Assert.AreEqual(actual, expected2);
-            }
-
-            //[Test]
-            //public void CanAttemptCaptureMonster()
-            //{
-            //    Monster m = new Monster("Test", 10) { IsElderDragon = false };
-            //    MonsterHunter mh = new MonsterHunter("First", "Last", "Cheese", "Longsword");
-
-            //    string expected = $"{mh.GetFullName()} attempts to capture {m.Name} ...... and caught it!";
-            //    string expected2 = $"{mh.GetFullName()} attempts to capture {m.Name} ...... but it escaped!";
-            //    string actual = mh.Capture(m);
-            //    Assert.That(actual,expected);
-            //    Assert.That( ,expected2);
-
-
-
-
-        }
-       [Test]
-        public void AttackMonsterReportsCorrectly()
-        {
-            Weapon w = new Weapon("Test Weapon", "Test Weapon", 1);
-            Monster m = new Monster("Test", 10);
-            MonsterHunter mh = new MonsterHunter("First", "Last", "Cheese", w);
-
-            string expected = $"{mh.GetFullName()} hits {m.Name} with {w.Name} doing {w.Damage} damage.";
-            Assert.AreEqual(mh.Attack(m), expected);
-        }
-
-        [Test]
-        public void WeaponWithOneDamageKills1HealthMonster()
-        {
-            Weapon w = new Weapon("Test Weapon", "Test Weapon", 1);
-            Monster m = new Monster("Test", 1);
-            MonsterHunter mh = new MonsterHunter("First", "Last", "Cheese", w);
-
-            string expected = $"{mh.GetFullName()} hits {m.Name} with {w.Name} and kills it!";
-            Assert.AreEqual(mh.Attack(m), expected);
         }
         [Test]
 

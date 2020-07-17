@@ -14,7 +14,7 @@ namespace Safari_Park
 
         public string Shoot() 
         {
-            return $"Snap!! Shooting a {this.ToString()} {_brand}";
+            return $"Snap!! Shooting a {this.ToString()} - {_brand}";
         }
 
     }

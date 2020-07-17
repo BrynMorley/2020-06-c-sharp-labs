@@ -6,12 +6,12 @@ namespace Safari_Park
 {
     public class MonsterHunter : Hunter ,IShootable
     {
-        private Weapon _weapon = new Weapon();
+        private LaserGun _weapon = new LaserGun("blank","blank",0);
         public MonsterHunter(string fName, string lName, IShootable PShooter, string weapon) : base(fName,lName,PShooter)
         {
             _weapon.Name = weapon;
         }
-        public MonsterHunter(string fName, string lName, IShootable PShooter, Weapon Equipped) : base(fName, lName, PShooter)
+        public MonsterHunter(string fName, string lName, IShootable PShooter, Ranged Equipped) : base(fName, lName, PShooter)
         {
             _weapon.Name = Equipped.Name;
             _weapon.Type = Equipped.Type;

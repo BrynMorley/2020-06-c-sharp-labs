@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Safari_Park
 {
-    public class Ranged : Weapon ,IShootable
+    abstract public class Ranged : Weapon ,IShootable
     {
         public Ranged(string name, string type, int damage) :base(name,type,damage)
         {
@@ -14,7 +14,7 @@ namespace Safari_Park
         
         public virtual string Shoot()
         {
-            return $"Shooting a {this.ToString()} {Name}";
+            return $"Shooting a {this.ToString()} - {Name}";
         }
 
         public override string ToString()

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Safari_Park
 {
-    public class Weapon
+    abstract public class Weapon
     {
         private string _name;
         private string _type;

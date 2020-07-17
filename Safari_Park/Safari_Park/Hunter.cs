@@ -6,18 +6,16 @@ namespace Safari_Park
 {
     public class Hunter : Person , IShootable
     {
-        private IShootable _Shooter;
+       
 
         public IShootable Shooter 
         {
-            get { return _Shooter; }
-            set { _Shooter = value; }
-
+            get;set;
         }
 
         public Hunter(string fName, string lName, IShootable PShooter): base(fName,lName)
         {
-            _Shooter = PShooter;
+            Shooter = PShooter;
         }
 
         public Hunter()
@@ -28,12 +26,12 @@ namespace Safari_Park
         public virtual string Shoot()
         {
             
-            return $"{GetFullName()}: {_Shooter.Shoot()}";
+            return $"{GetFullName()}: {Shooter.Shoot()}";
         }
 
         public override string ToString()
         {
-            return $"{base.ToString()}  Euipped with: {_Shooter} ";
+            return $"{base.ToString()}  Euipped with: {Shooter} ";
         }
     }
 }
