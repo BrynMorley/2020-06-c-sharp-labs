@@ -60,7 +60,7 @@ namespace Safari_Park
 
         public override string ToString()
         {
-            return $"{base.ToString()} capacity: { _capacity}  passengers: { _numPassengers} speed: {_speed} postion {Position}";
+            return $"{base.ToString()} capacity: { _capacity} passengers: { _numPassengers} speed: {_speed} position: {Position}";
         }
     }
 }

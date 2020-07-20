@@ -1,0 +1,29 @@
+﻿<Window x:Class="RadioGUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RadioGUI"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Background="LightGray" FontSize="30">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Label x:Name="Display" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Background="White"/>
+        <RadioButton x:Name="Channel_1" Grid.Row="2" Content="Channel 1" Checked="Channel_1_Checked" IsChecked="True"/>
+        <RadioButton x:Name="Channel_2" Grid.Row="2" Grid.Column="1" Content="Channel 2" Checked="Channel_2_Checked"/>
+        <RadioButton x:Name="Channel_3" Grid.Row="2" Grid.Column="2" Content="Channel 3" Checked="Channel_3_Checked"/>
+        <RadioButton x:Name="Channel_4" Grid.Row="2" Grid.Column="3" Content="Channel 4" Checked="Channel_4_Checked"/>
+        <Button x:Name="On_Off" Content="ON/OFF" Background="DarkGray" Click="On_Off_Click"/>
+    </Grid>
+</Window>

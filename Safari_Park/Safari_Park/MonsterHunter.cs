@@ -4,14 +4,14 @@ using System.Text;
 
 namespace Safari_Park
 {
-    public class MonsterHunter : Hunter
+    public class MonsterHunter : Hunter ,IShootable
     {
-        private Weapon _weapon = new Weapon();
-        public MonsterHunter(string fName, string lName, string camera,string weapon) : base(fName,lName,camera)
+        private LaserGun _weapon = new LaserGun("blank","blank",0);
+        public MonsterHunter(string fName, string lName, IShootable PShooter, string weapon) : base(fName,lName,PShooter)
         {
             _weapon.Name = weapon;
         }
-        public MonsterHunter(string fName, string lName, string camera, Weapon Equipped) : base(fName, lName, camera)
+        public MonsterHunter(string fName, string lName, IShootable PShooter, Ranged Equipped) : base(fName, lName, PShooter)
         {
             _weapon.Name = Equipped.Name;
             _weapon.Type = Equipped.Type;

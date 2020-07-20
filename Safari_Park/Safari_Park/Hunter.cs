@@ -4,13 +4,18 @@ using System.Text;
 
 namespace Safari_Park
 {
-    public class Hunter : Person
+    public class Hunter : Person , IShootable
     {
-        private string _camera;
+       
 
-        public Hunter(string fName, string lName, string camera =""): base(fName,lName)
+        public IShootable Shooter 
         {
-            _camera = camera;
+            get;set;
+        }
+
+        public Hunter(string fName, string lName, IShootable PShooter): base(fName,lName)
+        {
+            Shooter = PShooter;
         }
 
         public Hunter()
@@ -18,14 +23,15 @@ namespace Safari_Park
 
         }
 
-        public string Shoot()
+        public virtual string Shoot()
         {
-            return $"{GetFullName()} has taken a photo with their {_camera}";
+            
+            return $"{GetFullName()}: {Shooter.Shoot()}";
         }
 
         public override string ToString()
         {
-            return $"{base.ToString()}  Camera: {_camera}";
+            return $"{base.ToString()}  Euipped with: {Shooter} ";
         }
     }
 }
