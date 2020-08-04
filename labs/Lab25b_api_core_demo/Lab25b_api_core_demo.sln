@@ -5,17 +5,23 @@ VisualStudioVersion = 16.0.30225.117
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lab25b_api_core_demo", "Lab25b_api_core_demo.csproj", "{32B6C23F-D723-4127-B357-FA966ED361E8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab_26_cats_api", "..\Lab_26_cats_api\Lab_26_cats_api.csproj", "{D22AAF19-7F4A-4EA3-975C-4DB7A72BE0E3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lab_26_cats_api", "..\Lab_26_cats_api\Lab_26_cats_api.csproj", "{D22AAF19-7F4A-4EA3-975C-4DB7A72BE0E3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab_27_delegates", "..\Lab_27_delegates\Lab_27_delegates.csproj", "{31216096-75AF-481A-A095-3D2C238BB33C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lab_27_delegates", "..\Lab_27_delegates\Lab_27_delegates.csproj", "{31216096-75AF-481A-A095-3D2C238BB33C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab_28_Delegates", "..\Lab_28_Delegates\Lab_28_Delegates.csproj", "{0E9BF083-AC2F-42CC-80EB-3AF653173A15}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lab_28_Delegates", "..\Lab_28_Delegates\Lab_28_Delegates.csproj", "{0E9BF083-AC2F-42CC-80EB-3AF653173A15}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab_29_deleagete_with_lambda", "..\Lab_29_deleagete_with_lambda\Lab_29_deleagete_with_lambda.csproj", "{443C7D09-E3AD-48B9-BE2D-E838913DF5B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lab_29_deleagete_with_lambda", "..\Lab_29_deleagete_with_lambda\Lab_29_deleagete_with_lambda.csproj", "{443C7D09-E3AD-48B9-BE2D-E838913DF5B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_30_basic_event", "..\lab_30_basic_event\lab_30_basic_event.csproj", "{D527538F-B8F8-4D10-9591-3187439B9471}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_30_basic_event", "..\lab_30_basic_event\lab_30_basic_event.csproj", "{D527538F-B8F8-4D10-9591-3187439B9471}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_31_oop_events", "..\lab_31_oop_events\lab_31_oop_events.csproj", "{3364C994-2318-42EF-BDBF-FE2FD2FEFBCF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_31_oop_events", "..\lab_31_oop_events\lab_31_oop_events.csproj", "{3364C994-2318-42EF-BDBF-FE2FD2FEFBCF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_32_Tasks", "..\lab_32_Tasks\lab_32_Tasks.csproj", "{E24B31B9-7A2B-4DDC-9FDF-DC3E45B3160B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_33_Task_array", "..\lab_33_Task_array\lab_33_Task_array.csproj", "{6977EB5B-4115-40D6-BF4C-EDB2DC42E0C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_34_task_parallel_processing", "..\lab_34_task_parallel_processing\lab_34_task_parallel_processing.csproj", "{ACF3434B-7383-46A4-8299-39EC411DB49B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +57,18 @@ Global
 		{3364C994-2318-42EF-BDBF-FE2FD2FEFBCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3364C994-2318-42EF-BDBF-FE2FD2FEFBCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3364C994-2318-42EF-BDBF-FE2FD2FEFBCF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E24B31B9-7A2B-4DDC-9FDF-DC3E45B3160B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E24B31B9-7A2B-4DDC-9FDF-DC3E45B3160B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E24B31B9-7A2B-4DDC-9FDF-DC3E45B3160B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E24B31B9-7A2B-4DDC-9FDF-DC3E45B3160B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6977EB5B-4115-40D6-BF4C-EDB2DC42E0C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6977EB5B-4115-40D6-BF4C-EDB2DC42E0C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6977EB5B-4115-40D6-BF4C-EDB2DC42E0C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6977EB5B-4115-40D6-BF4C-EDB2DC42E0C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACF3434B-7383-46A4-8299-39EC411DB49B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACF3434B-7383-46A4-8299-39EC411DB49B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACF3434B-7383-46A4-8299-39EC411DB49B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACF3434B-7383-46A4-8299-39EC411DB49B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
