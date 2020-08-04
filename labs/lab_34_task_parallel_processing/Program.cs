@@ -44,6 +44,21 @@ namespace lab_34_task_parallel_processing
                     );
             }
 
+            Parallel.For(0,10,
+                i =>
+                {
+                    Thread.Sleep(7);
+                     Console.WriteLine($"Parallel For Job {i} - running background processing");
+                    
+                }
+                );
+
+            var stringArray = new string[] { "Hey", "Jude", "Don't", "Make", "It", "Bad" };
+
+            Parallel.ForEach(stringArray,
+                (item) => { Console.WriteLine($"Processing string array item {item} with a length of {item.Length}"); }
+                );
+                   
 
 
             Console.WriteLine();
