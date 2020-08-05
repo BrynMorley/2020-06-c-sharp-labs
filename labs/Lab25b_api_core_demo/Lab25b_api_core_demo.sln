@@ -17,13 +17,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_30_basic_event", "..\la
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_31_oop_events", "..\lab_31_oop_events\lab_31_oop_events.csproj", "{3364C994-2318-42EF-BDBF-FE2FD2FEFBCF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_32_Tasks", "..\lab_32_Tasks\lab_32_Tasks.csproj", "{E24B31B9-7A2B-4DDC-9FDF-DC3E45B3160B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_32_Tasks", "..\lab_32_Tasks\lab_32_Tasks.csproj", "{E24B31B9-7A2B-4DDC-9FDF-DC3E45B3160B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_33_Task_array", "..\lab_33_Task_array\lab_33_Task_array.csproj", "{6977EB5B-4115-40D6-BF4C-EDB2DC42E0C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_33_Task_array", "..\lab_33_Task_array\lab_33_Task_array.csproj", "{6977EB5B-4115-40D6-BF4C-EDB2DC42E0C0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_34_task_parallel_processing", "..\lab_34_task_parallel_processing\lab_34_task_parallel_processing.csproj", "{ACF3434B-7383-46A4-8299-39EC411DB49B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_34_task_parallel_processing", "..\lab_34_task_parallel_processing\lab_34_task_parallel_processing.csproj", "{ACF3434B-7383-46A4-8299-39EC411DB49B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_35_async and await", "..\lab_35_async and await\lab_35_async and await.csproj", "{8FCC9603-4BCB-4405-BD31-827C3787B4DF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_35_async and await", "..\lab_35_async and await\lab_35_async and await.csproj", "{8FCC9603-4BCB-4405-BD31-827C3787B4DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab_36_http", "..\Lab_36_http\Lab_36_http.csproj", "{77958837-3388-467A-A5AB-1837E22DED3B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +77,10 @@ Global
 		{8FCC9603-4BCB-4405-BD31-827C3787B4DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8FCC9603-4BCB-4405-BD31-827C3787B4DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8FCC9603-4BCB-4405-BD31-827C3787B4DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77958837-3388-467A-A5AB-1837E22DED3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77958837-3388-467A-A5AB-1837E22DED3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77958837-3388-467A-A5AB-1837E22DED3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77958837-3388-467A-A5AB-1837E22DED3B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

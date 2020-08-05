@@ -85,7 +85,7 @@ namespace lab_35_async_and_await
             
         }
 
-        static string[] ReadFile(string fileName)
+        static string[] ReadFile(string fileName)   
         {
             var array = File.ReadAllLines(fileName);
             return array;
@@ -94,7 +94,8 @@ namespace lab_35_async_and_await
         static async Task<string[]> ReturnTextFileToArrayAsync(string fileName)
         {
             
-            var array = await Task.FromResult(File.ReadAllLinesAsync(fileName));
+           // var array = await Task.FromResult(File.ReadAllLinesAsync(fileName));
+            var array = await File.ReadAllLinesAsync(fileName);
             return array;
         
         }
