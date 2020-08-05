@@ -80,7 +80,7 @@ namespace lab_35_async_and_await
 
             s.Restart();
             var ArrayOutput = ReturnTextFileToArrayAsync(fileName);
-            Console.WriteLine($"Array Async took {s.ElapsedMilliseconds}");
+            Console.WriteLine($"Array Async took {s.ElapsedMilliseconds} with {ArrayOutput.Result.Length}");
 
             
         }
@@ -93,10 +93,12 @@ namespace lab_35_async_and_await
 
         static async Task<string[]> ReturnTextFileToArrayAsync(string fileName)
         {
-            var array = await File.ReadAllLinesAsync(fileName);
+            
+            var array = await Task.FromResult(File.ReadAllLinesAsync(fileName));
             return array;
         
         }
+
         static async void ReadTextFileToArrayAsync(string fileName)
         {
             var array = await File.ReadAllLinesAsync(fileName);
