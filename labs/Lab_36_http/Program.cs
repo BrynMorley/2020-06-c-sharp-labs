@@ -19,7 +19,7 @@ namespace Lab_36_http
             // GetPageUsingWebClient();
             // GetPageUsingWebRequest();
 
-            GetDataUsingHttpClient();
+            //GetDataUsingHttpClient();
 
             User user = new User().deserialise(url);
 
