@@ -31,7 +31,7 @@ namespace Safari_Park
 
         public override string ToString()
         {
-            return $"{base.ToString()}  Euipped with: {Shooter} ";
+            return $"{base.ToString()}  Equipped with: {Shooter} ";
         }
     }
 }
