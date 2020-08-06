@@ -1,0 +1,35 @@
+﻿<Window x:Class="Steam_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Steam_WPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Background="SlateGray">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBox x:Name="TextBox_Steam_ID" Background="Black" Foreground="White" Grid.Column="1" Grid.ColumnSpan="3"/>
+
+        <Image x:Name="Image_Steam" Source="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Steam_icon_logo.svg/1024px-Steam_icon_logo.svg.png" Grid.Column="1" Grid.Row="1" Grid.RowSpan="3" Grid.ColumnSpan="3"/>
+        
+        <Button x:Name="Button_BrynID" Content="Bryn's ID" Click="Button_BrynID_Click"/>
+
+        <Button x:Name="Button_PlayerSummary" Content="Profile" Grid.Column="4" Click="Button_PlayerSummary_Click"/>
+        <Button x:Name="Button_RecentGame" Content="Recent Game" Grid.Column="4" Grid.Row="1" Click="Button_RecentGame_Click"/>
+
+        <TextBlock x:Name="TextBlock_Information" Grid.Row="4" Grid.ColumnSpan="5" Background="Black" Foreground="White"/>
+    </Grid>
+</Window>
