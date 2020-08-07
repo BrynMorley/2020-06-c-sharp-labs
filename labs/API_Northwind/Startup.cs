@@ -27,7 +27,7 @@ namespace API_Northwind
         public void ConfigureServices(IServiceCollection services)
         {
             //services.AddDbContext<NorthwindContext>(options => options.UseSqlServer("Data Source = (localdb)\\mssqllocaldb;Initial Catalog = Northwind;"));
-            services.AddDbContext<NorthwindContext>(options => options.UseSqlServer(Configuration.GetConnectionString("Northwind")));
+            services.AddDbContext<NorthwindContext>(options => options.UseSqlite("Data Source = Northwind.db"));
             services.AddControllers();
         }
 

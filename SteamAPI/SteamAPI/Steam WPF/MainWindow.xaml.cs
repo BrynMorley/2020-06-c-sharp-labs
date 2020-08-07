@@ -45,7 +45,7 @@ namespace Steam_WPF
             Image_Steam.Source = bitmapImage;
            
                
-        }
+        }   
 
         private void Button_PlayerSummary_Click(object sender, RoutedEventArgs e)
         {
