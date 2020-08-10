@@ -42,7 +42,7 @@ namespace lab_38_northwind_api_client
             Thread.Sleep(2000);
                 Console.WriteLine(customers);
                 Console.WriteLine(customer);
-
+                
             // DeleteCustomer(newCustomer.CustomerId);
             //DeleteCustomerAsync(newCustomer.CustomerId);
          DeleteCustomerAsyncTask(newCustomer.CustomerId).Wait();
