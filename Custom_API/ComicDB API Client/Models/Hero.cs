@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Custom_API.Models
+namespace ComicDB_API_Client
 {
-    public partial class Heroes
+    public partial class Hero
     {
-        public Heroes()
+        public Hero()
         {
-            Villains = new HashSet<Villains>();
+            Villains = new HashSet<Villain>();
         }
 
         public int HeroId { get; set; }
@@ -16,8 +16,8 @@ namespace Custom_API.Models
         public int? TeamId { get; set; }
         public int? VillainTeamId { get; set; }
 
-        public virtual Teams Team { get; set; }
-        public virtual Teams VillainTeam { get; set; }
-        public virtual ICollection<Villains> Villains { get; set; }
+        public virtual Team Team { get; set; }
+        public virtual Team VillainTeam { get; set; }
+        public virtual ICollection<Villain> Villains { get; set; }
     }
 }

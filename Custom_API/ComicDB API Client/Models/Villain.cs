@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Custom_API.Models
+namespace ComicDB_API_Client
 {
-    public partial class Villains
+    public partial class Villain
     {
         public int VillainId { get; set; }
         public string Alias { get; set; }
@@ -12,8 +12,8 @@ namespace Custom_API.Models
         public int? HeroTeamId { get; set; }
         public int? HeroId { get; set; }
 
-        public virtual Heroes Hero { get; set; }
-        public virtual Teams HeroTeam { get; set; }
-        public virtual Teams Team { get; set; }
+        public virtual Hero Hero { get; set; }
+        public virtual Team HeroTeam { get; set; }
+        public virtual Team Team { get; set; }
     }
 }
