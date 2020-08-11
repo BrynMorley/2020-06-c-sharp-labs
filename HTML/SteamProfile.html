@@ -6,18 +6,28 @@
     
     <title>Steam</title>
     <script></script>
-    <style></style> 
+    <style>
+    Header{
+        background-color: dimgrey;
+    }
+    nav {
+        background-color: dimgrey;
+    }
+    </style> 
 </head>
 <body>
+    <div class="Header">
     <nav>
+        <header> <H1>Bryn's Profiles</H1></header>
         <button onclick="location.href='http://127.0.0.1:5500/SteamProfile.html'">Steam</button>
         <button onclick="location.href='http://127.0.0.1:5500/RiotProfile.html'">Riot</button>
         <button onclick="location.href='http://127.0.0.1:5500/BlizzardProfile.html'">Blizzard</button>
     </nav>
+    </div>  
     <H1>Steam</H1>
     
     <button onclick="bindGetPlayerSummariesButton()">Get Steam Data</button>
-    <div id="data">No data yet</div>
+    <div class ="Data" id="data">No data yet</div>
 
     <script>
 
