@@ -10,6 +10,8 @@
   - [Javascript](#javascript)
 
 ## Introduction
+Creating a website that shows profiles for different games platforms.
+
 
 ## HTML
 
