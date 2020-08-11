@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30225.117
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lab25b_api_core_demo", "Lab25b_api_core_demo.csproj", "{32B6C23F-D723-4127-B357-FA966ED361E8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lab_25b_api_core_demo", "Lab_25b_api_core_demo.csproj", "{32B6C23F-D723-4127-B357-FA966ED361E8}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lab_26_cats_api", "..\Lab_26_cats_api\Lab_26_cats_api.csproj", "{D22AAF19-7F4A-4EA3-975C-4DB7A72BE0E3}"
 EndProject
@@ -27,7 +27,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_35_async and await", ".
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lab_36_http", "..\Lab_36_http\Lab_36_http.csproj", "{77958837-3388-467A-A5AB-1837E22DED3B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_37_http_deserialise_to_json", "..\lab_37_http_deserialise_to_json\lab_37_http_deserialise_to_json.csproj", "{95C363B3-9B4E-44D7-86CF-ADFE507F48CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_37_http_deserialise_to_json", "..\lab_37_http_deserialise_to_json\lab_37_http_deserialise_to_json.csproj", "{95C363B3-9B4E-44D7-86CF-ADFE507F48CF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API_Northwind", "..\API_Northwind\API_Northwind.csproj", "{51FBF415-E00A-4FED-973E-06D61C5B9F28}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_38_northwind_api_client", "..\lab_38_northwind_api_client\lab_38_northwind_api_client.csproj", "{7420F8F1-37A5-4E7E-BE1C-69C6E55E5D81}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_39_api_code_first", "..\lab_39_api_code_first\lab_39_api_code_first.csproj", "{2B463382-6BC9-4600-9653-1AD1DEB9380E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_40_entity_code_first", "..\lab_40_entity_code_first\lab_40_entity_code_first.csproj", "{263A13C3-AC5F-4CE9-A2DB-16F1C7698DFB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_41_xml", "..\lab_41_xml\lab_41_xml.csproj", "{146A462A-B77C-42B5-AC7B-AA0766165F43}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_42_xml_deserialise", "..\lab_42_xml_deserialise\lab_42_xml_deserialise.csproj", "{35B7A8B2-478A-4BB6-BD90-212B7C84A36F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +99,30 @@ Global
 		{95C363B3-9B4E-44D7-86CF-ADFE507F48CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{95C363B3-9B4E-44D7-86CF-ADFE507F48CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{95C363B3-9B4E-44D7-86CF-ADFE507F48CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51FBF415-E00A-4FED-973E-06D61C5B9F28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51FBF415-E00A-4FED-973E-06D61C5B9F28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51FBF415-E00A-4FED-973E-06D61C5B9F28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51FBF415-E00A-4FED-973E-06D61C5B9F28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7420F8F1-37A5-4E7E-BE1C-69C6E55E5D81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7420F8F1-37A5-4E7E-BE1C-69C6E55E5D81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7420F8F1-37A5-4E7E-BE1C-69C6E55E5D81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7420F8F1-37A5-4E7E-BE1C-69C6E55E5D81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B463382-6BC9-4600-9653-1AD1DEB9380E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B463382-6BC9-4600-9653-1AD1DEB9380E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B463382-6BC9-4600-9653-1AD1DEB9380E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B463382-6BC9-4600-9653-1AD1DEB9380E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{263A13C3-AC5F-4CE9-A2DB-16F1C7698DFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{263A13C3-AC5F-4CE9-A2DB-16F1C7698DFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{263A13C3-AC5F-4CE9-A2DB-16F1C7698DFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{263A13C3-AC5F-4CE9-A2DB-16F1C7698DFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{146A462A-B77C-42B5-AC7B-AA0766165F43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{146A462A-B77C-42B5-AC7B-AA0766165F43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{146A462A-B77C-42B5-AC7B-AA0766165F43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{146A462A-B77C-42B5-AC7B-AA0766165F43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35B7A8B2-478A-4BB6-BD90-212B7C84A36F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35B7A8B2-478A-4BB6-BD90-212B7C84A36F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35B7A8B2-478A-4BB6-BD90-212B7C84A36F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35B7A8B2-478A-4BB6-BD90-212B7C84A36F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

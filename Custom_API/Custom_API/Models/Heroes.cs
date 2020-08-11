@@ -13,10 +13,11 @@ namespace Custom_API.Models
         public int HeroId { get; set; }
         public string Alias { get; set; }
         public string RealName { get; set; }
-        public string Team { get; set; }
-        public int? VillainId { get; set; }
+        public int? TeamId { get; set; }
+        public int? VillainTeamId { get; set; }
 
-        public virtual Villains Villain { get; set; }
+        public virtual Teams Team { get; set; }
+        public virtual Teams VillainTeam { get; set; }
         public virtual ICollection<Villains> Villains { get; set; }
     }
 }
