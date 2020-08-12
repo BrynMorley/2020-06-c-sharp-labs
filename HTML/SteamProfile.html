@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <title>Profiles</title>
+    
+         <!-- Bootstrap CSS -->
+         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    
+        <style>
+        Header{
+            background-color: dimgrey;
+        }
+        nav.navbar{
+            background-color: dimgrey;
+        }
+        body{
+            background-color: dimgray;
+        }
+        </style> 
+    </head>
+<body>
+ 
+        <div class="Header">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#">Bryn's Profiles</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link" href="http://127.0.0.1:5500/Profiles.html">Home </a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href='http://127.0.0.1:5500/SteamProfile.html'>Steam <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href='http://127.0.0.1:5500/RiotProfile.html'>Riot</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="http://127.0.0.1:5500/BlizzardProfile.html">Blizzard</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            
+    <div class="container">
+        <H1>Steam</H1>
+        <input type="text" class="form-control" id="getPlSummaryInput" placeholder="Enter SteamID">
+        <button class="btn btn-primary" id="getPlayerSummaries" type="button">Submit</button>
+        <div class ="Data" id="data">No data yet</div>
+    </div>
+    <div class="container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Steam_icon_logo.svg/600px-Steam_icon_logo.svg.png" id="AvatarImage">
+    </div>
+
+    <script>
+document.addEventListener('DOMContentLoaded', bindGetPlayerSummariesButton);
+
+function bindGetPlayerSummariesButton(){
+	document.getElementById('getPlayerSummaries').addEventListener('click', function(event) {
+	var homeURL = "http://localhost:3000/getplayersummary/?"
+	var userInput = document.getElementById('getPlSummaryInput').value;
+    var newURL = homeURL+userInput;
+     var req = new XMLHttpRequest();
+	req.open("GET", newURL, true);
+	req.addEventListener('load', function(){
+        if(req.status>= 200 && req.status<400)
+        {
+            var response = JSON.parse(req.responseText);
+            console.log(response);
+            document.getElementById('data').innerHTML=response.response.players[0].personaname;
+            document.getElementById('AvatarImage').src=response.response.players[0].avatarfull;
+
+		}
+			else {
+				console.log("Error in network request: " + request.statusText);
+			}
+	});
+	req.send(null);
+	event.preventDefault();
+   
+    })
+}
+
+
+    </script>
+    
+</body>
+</html> 

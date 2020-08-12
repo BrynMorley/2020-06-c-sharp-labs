@@ -37,9 +37,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_39_api_code_first", "..
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_40_entity_code_first", "..\lab_40_entity_code_first\lab_40_entity_code_first.csproj", "{263A13C3-AC5F-4CE9-A2DB-16F1C7698DFB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_41_xml", "..\lab_41_xml\lab_41_xml.csproj", "{146A462A-B77C-42B5-AC7B-AA0766165F43}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_41_xml", "..\lab_41_xml\lab_41_xml.csproj", "{146A462A-B77C-42B5-AC7B-AA0766165F43}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_42_xml_deserialise", "..\lab_42_xml_deserialise\lab_42_xml_deserialise.csproj", "{35B7A8B2-478A-4BB6-BD90-212B7C84A36F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_42_xml_deserialise", "..\lab_42_xml_deserialise\lab_42_xml_deserialise.csproj", "{35B7A8B2-478A-4BB6-BD90-212B7C84A36F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Html-Hello_World", "Html-Hello_World", "{05C71C10-D78A-434F-B7EA-D8C667D6A545}"
+	ProjectSection(SolutionItems) = preProject
+		Index.html = Index.html
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
