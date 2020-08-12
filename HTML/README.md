@@ -18,7 +18,9 @@ Run  node .\SteamGet.js in ps or cmd first to retreive Data from Steam API
 
 ## HTML
 Currently done :
-Steam Player Data retreiveable
+Steam: Player Data retreiveable
+Riot (League of Legends): key is reset daily currently , so the code may not work.
+Blizzard: Can retrieve My personal World of Warcraft characters  List of characters retreiveable
 
 ## CSS
 

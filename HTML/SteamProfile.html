@@ -51,10 +51,17 @@
         <H1>Steam</H1>
         <input type="text" class="form-control" id="getPlSummaryInput" placeholder="Enter SteamID">
         <button class="btn btn-primary" id="getPlayerSummaries" type="button">Submit</button>
-        <div class ="Data" id="data">No data yet</div>
+        
     </div>
     <div class="container">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Steam_icon_logo.svg/600px-Steam_icon_logo.svg.png" id="AvatarImage">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class ="Data" id="Username">No data yet</div>
+        </div>
+        <div class="col-sm-6">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Steam_icon_logo.svg/600px-Steam_icon_logo.svg.png" id="AvatarImage">
+        </div>
+      </div>
     </div>
 
     <script>
@@ -72,7 +79,7 @@ function bindGetPlayerSummariesButton(){
         {
             var response = JSON.parse(req.responseText);
             console.log(response);
-            document.getElementById('data').innerHTML=response.response.players[0].personaname;
+            document.getElementById('Username').innerHTML="Display Name: " + response.response.players[0].personaname;
             document.getElementById('AvatarImage').src=response.response.players[0].avatarfull;
 
 		}

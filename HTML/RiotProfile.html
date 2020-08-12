@@ -9,11 +9,17 @@
          <!-- Bootstrap CSS -->
          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     
-        <style>
-        Header{
-            background-color: dimgrey;
-        }
-        </style> 
+         <style>
+          Header{
+              background-color: dimgrey;
+          }
+          nav.navbar{
+              background-color: dimgrey;
+          }
+          body{
+              background-color: dimgray;
+          }
+          </style> 
     </head>
 
 <body>
@@ -41,8 +47,35 @@
             </div>
           </nav>
         </div>  
+   <div class="container">
     <H1>Riot</H1>
-   
+    <input type="text" class="form-control" id="getSummonerInput" placeholder="Enter SummonerName">
+    <button class="btn btn-primary" id="getSummonerLevel" type="button" onclick="getData()">Submit</button>
+    </div>
+   <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class ="Data" id="SummonerName">No data yet</div>
+        <div class ="Data" id="SummonerLevel">No data yet</div>
+      </div>
+      <div class="col-sm-6">
+        <img src="https://www.riotgames.com/darkroom/800/da85e92aaf87f26181ded41afe03b1dc:aaeeccb4b282b616ef907ec68c40f2b7/lol-logo-rendered-hi-res.png" id="AvatarImage">
+      </div>
+    </div>
+  </div>
 
+    <script>
+      function getData(){
+        var key = "RGAPI-58f83cc1-5e51-4ad3-b534-344a940cc5da"
+            fetch('https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/'+ document.getElementById('getSummonerInput').innerHTML +'?api_key='+ key)
+             .then(response => response.json())
+             .then(json => {
+                        console.log(json);
+             })
+        }
+       
+  
+      
+    </script>
 </body>
 </html> 
