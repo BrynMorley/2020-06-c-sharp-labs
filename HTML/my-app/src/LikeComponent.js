@@ -1,6 +1,6 @@
 import React from 'react';
 import ChildComponent from './ChildComponent'
-import ShowComponent from './ShowComponent'
+//import ShowComponent from './ShowComponent'
 import DisplayPokemon from  './DisplayPokemon'
 
 class LikeComponent extends React.Component{
