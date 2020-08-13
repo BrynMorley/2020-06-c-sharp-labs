@@ -9,11 +9,17 @@
          <!-- Bootstrap CSS -->
          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     
-        <style>
-        Header{
-            background-color: dimgrey;
-        }
-        </style> 
+         <style>
+          Header{
+              background-color: dimgrey;
+          }
+          nav.navbar{
+              background-color: dimgrey;
+          }
+          body{
+              background-color: dimgray;
+          }
+          </style> 
     </head>
 <body>
     <div class="Header">
@@ -42,7 +48,87 @@
           </nav>
         </div>  
 
-    <H1>Blizzard</H1>
-   
+        <div class="container">
+          <H1>World of Warcraft</H1>
+          <input type="text" class="form-control" id="getProfileInput" placeholder="Unneeded currently">
+          <button class="btn btn-primary" id="getWOWCharacters" type="button" onclick="getData()">Submit</button>
+          </div>
+          <div class= "container">
+            <div id="data">No data yet</div>
+            
+            <table id="wowCharactersTable" class="table">
+              <thead>
+                <th>Name</th>
+                <th>Class</th>
+                <th>Level</th>
+                <th>Faction</th>
+                <th>Race</th>
+                <th>Realm</th>
+              </thead>
+              <tbody>
+              
+              </tbody>
+
+            </table>
+          </div>
+
+    <script>
+           // function getData(){
+           //       var key = "RGAPI-58f83cc1-5e51-4ad3-b534-344a940cc5da"
+            //          fetch('https://eu.api.blizzard.com/profile/user/wow?namespace=profile-eu&locale=en_UK&access_token=USG6CaM1KKKobYgpkkLv0pkdXDzvoVq4Ve')
+         //              .then(response => response.json())
+         //              .then(json => {
+         //              console.log(json);
+         //              document.getElementById('data').innerHTML=JSON.stringify(json);
+                 
+         //    }) 
+       //     }
+    
+      
+             function getData(){
+                      
+                      var req = new XMLHttpRequest();
+                      req.open("GET",'https://eu.api.blizzard.com/profile/user/wow?namespace=profile-eu&locale=en_UK&access_token=USG6CaM1KKKobYgpkkLv0pkdXDzvoVq4Ve',true);
+                      req.addEventListener('load', function(){
+                        if(req.status>= 200 && req.status<400)
+                        {
+                          var response = JSON.parse(req.responseText);
+                          console.log(response);
+                          document.getElementById('data').innerHTML= "Data Returned";
+                          var characterTable = document.getElementById("wowCharactersTable");
+
+                          for(var i= 1; i < response.wow_accounts[0].characters.length;i++)  
+                          {    
+                          var row = characterTable.insertRow(i);
+                          var Name = row.insertCell(0);
+                          var Class = row.insertCell(1);
+                          var Level = row.insertCell(2);
+                          var Faction = row.insertCell(3);
+                          var Race = row.insertCell(4);
+                          var Realm = row.insertCell(5);
+
+                           Name.innerHTML = response.wow_accounts[0].characters[i].name;
+                           Level.innerHTML = response.wow_accounts[0].characters[i].level;
+                           Class.innerHTML = response.wow_accounts[0].characters[i].playable_class.id;
+                           Faction.innerHTML = response.wow_accounts[0].characters[i].faction.type;
+                           Race.innerHTML = response.wow_accounts[0].characters[i].playable_race.id;
+                           Realm.innerHTML = response.wow_accounts[0].characters[i].realm.slug;
+                          }
+                          // response.wow_accounts[0].forEach(character => {
+                          // });
+                        }
+                        else{
+                          console.log("Error in network request: " + request.statusText);
+                        }
+                      });
+                      req.send(null);
+                      event.preventDefault();
+                  }
+                  
+                 
+    //Gets List of my (Bryn's) wow characters
+    //https://eu.api.blizzard.com/profile/user/wow?namespace=profile-eu&locale=en_UK&access_token=USG6CaM1KKKobYgpkkLv0pkdXDzvoVq4Ve
+
+    </script>
 </body>
 </html> 

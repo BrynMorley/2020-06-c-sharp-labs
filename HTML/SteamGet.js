@@ -2,7 +2,7 @@ var express = require('express');
 
 var app = express();
 var request = require('request');
-
+var steamKey = "2901A4BCBA478FDD1D4226CECD80A1C7";
 app.set('port', 3000);
 
 app.use(function(req, res, next) {
