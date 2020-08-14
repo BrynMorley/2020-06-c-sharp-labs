@@ -62,7 +62,20 @@
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Steam_icon_logo.svg/600px-Steam_icon_logo.svg.png" id="AvatarImage">
         </div>
       </div>
+
+      <table id="RecentlyPlayedTable" class="table table-striped">
+        <thead>
+          <th>Name</th>
+          <th>Time Played (2w)</th>
+        </thead>
+        <tbody>
+        
+        </tbody>
+  
+      </table>
     </div>
+
+    
 
     <script>
 document.addEventListener('DOMContentLoaded', bindGetPlayerSummariesButton);
@@ -78,19 +91,46 @@ function bindGetPlayerSummariesButton(){
         if(req.status>= 200 && req.status<400)
         {
             var response = JSON.parse(req.responseText);
-            console.log(response);
+           // console.log(response);
             document.getElementById('Username').innerHTML="Display Name: " + response.response.players[0].personaname;
             document.getElementById('AvatarImage').src=response.response.players[0].avatarfull;
-
-		}
+		    }
 			else {
-				console.log("Error in network request: " + request.statusText);
+				 console.log("Error in network request: " + request.statusText);
 			}
 	});
 	req.send(null);
+	
+  
+
+   var homeURL2 = "http://localhost:3000/getrecentlyplayed/?"
+	var userInput = document.getElementById('getPlSummaryInput').value;
+	var newURL2 = homeURL2+userInput;
+	var req2 = new XMLHttpRequest();
+	req2.open("GET", newURL2, true);
+	req2.addEventListener('load', function(){
+		//if(req2.status>= 200 && req2.status<400){
+		var response = JSON.parse(req2.responseText);
+    console.log(response);
+    var gamesTable = document.getElementById("RecentlyPlayedTable");
+    for(var i =0; i< response.response.games.length;i++)
+    {
+      
+      var row = gamesTable.insertRow(i+1);
+      var name = row.insertCell(0);
+      var time = row.insertCell(1);
+
+      name.innerHTML = response.response.games[i].name;
+      time.innerHTML = response.response.games[i].playtime_2weeks;
+    }
+	//	}
+		//	else {
+			//	console.log("Error in network request: " );
+			//}
+	});
+	req2.send(null);
 	event.preventDefault();
-   
-    })
+})
 }
 
 
