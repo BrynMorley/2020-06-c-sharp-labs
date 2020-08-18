@@ -46,6 +46,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Html-Hello_World", "Html-He
 		Index.html = Index.html
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_43_mvc_core_website_demo", "..\lab_43_mvc_core_website_demo\lab_43_mvc_core_website_demo.csproj", "{ADB308E2-4CA8-4BEB-BC58-F6191D07739B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -128,6 +130,10 @@ Global
 		{35B7A8B2-478A-4BB6-BD90-212B7C84A36F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{35B7A8B2-478A-4BB6-BD90-212B7C84A36F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{35B7A8B2-478A-4BB6-BD90-212B7C84A36F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADB308E2-4CA8-4BEB-BC58-F6191D07739B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADB308E2-4CA8-4BEB-BC58-F6191D07739B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADB308E2-4CA8-4BEB-BC58-F6191D07739B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADB308E2-4CA8-4BEB-BC58-F6191D07739B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

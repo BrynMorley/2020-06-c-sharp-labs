@@ -18,7 +18,22 @@
           }
           body{
               background-color: dimgray;
+              color:white;
           }
+          .row{
+            background-color:rgb(56, 54, 54);
+            color:white;
+            font-size: 2em;
+            margin: 5px;
+            border-radius: 25px;
+          }
+          .ProfilePic{
+            width: 10em;
+          }
+          tr{
+            color:white;
+          }
+          
           </style> 
     </head>
 <body>
@@ -32,7 +47,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav">
                 <li class="nav-item">
-                  <a class="nav-link" href="http://127.0.0.1:5500/Profiles.html">Home </a>
+                  <a class="nav-link" href="/Index.html">Home </a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href='http://127.0.0.1:5500/SteamProfile.html'>Steam</a>
@@ -56,7 +71,7 @@
           <div class= "container">
             <div id="data">No data yet</div>
             
-            <table id="wowCharactersTable" class="table table-striped">
+            <table  class="table table-striped table-dark">
               <thead>
                 <th>Name</th>
                 <th>Class</th>
@@ -65,7 +80,7 @@
                 <th>Race</th>
                 <th>Realm</th>
               </thead>
-              <tbody>
+              <tbody id="wowCharactersTable"> 
               
               </tbody>
 
@@ -75,7 +90,7 @@
     <script>
            // function getData(){
            //       var key = "RGAPI-58f83cc1-5e51-4ad3-b534-344a940cc5da"
-            //          fetch('https://eu.api.blizzard.com/profile/user/wow?namespace=profile-eu&locale=en_UK&access_token=USG6CaM1KKKobYgpkkLv0pkdXDzvoVq4Ve')
+            //          fetch('https://us.api.blizzard.com/profile/user/wow?namespace=profile-us&locale=en_US&access_token=5169707d13a74719a5ce7ef44378db90')
          //              .then(response => response.json())
          //              .then(json => {
          //              console.log(json);
@@ -88,7 +103,7 @@
              function getData(){
                       
                       var req = new XMLHttpRequest();
-                      req.open("GET",'https://eu.api.blizzard.com/profile/user/wow?namespace=profile-eu&locale=en_UK&access_token=USG6CaM1KKKobYgpkkLv0pkdXDzvoVq4Ve',true);
+                      req.open("GET",'https://eu.api.blizzard.com/profile/user/wow?namespace=profile-eu&locale=en_UK&access_token=US19zbmkAUh05L0PSc2wQyxwYBP7C347s3',true);
                       req.addEventListener('load', function(){
                         if(req.status>= 200 && req.status<400)
                         {
@@ -97,7 +112,7 @@
                           document.getElementById('data').innerHTML= "Data Returned";
                           var characterTable = document.getElementById("wowCharactersTable");
 
-                          for(var i= 1; i < response.wow_accounts[0].characters.length;i++)  
+                          for(var i= 0; i < response.wow_accounts[0].characters.length;i++)  
                           {    
                           var row = characterTable.insertRow(i);
                           var Name = row.insertCell(0);
@@ -114,11 +129,11 @@
                            Race.innerHTML = response.wow_accounts[0].characters[i].playable_race.id;
                            Realm.innerHTML = response.wow_accounts[0].characters[i].realm.slug;
                           }
-                          // response.wow_accounts[0].forEach(character => {
-                          // });
+                          response.wow_accounts[0].forEach(character => {
+                          });
                         }
                         else{
-                          console.log("Error in network request: " + request.statusText);
+                          console.log("Error in network request: " /*+ request.statusText*/);
                         }
                       });
                       req.send(null);

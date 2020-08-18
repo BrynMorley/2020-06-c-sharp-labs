@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating Elements</title>
+</head>
+<body>
+
+    <div class="container" id="content ">
+        <button onclick="addDiv();">Add Div</button>
+    </div>
+    <script>
+        /* Create a web page which cna add and remove elements from the dom
+        -div
+        -click to add new dic
+        -double click on dic o remove existing div with are you sure check box
+        -random colours
+        */
+        var content = document.getElementById("content");
+
+        var addDiv = () => {
+            var div = document.createElement("div")
+            div.style.height = "100px";
+            div.style.width = "100px";
+            div.style.margin = "10px";
+            div.innerHTML = "click to remove";
+        }
+
+     
+    </script>
+</body>
+</html>

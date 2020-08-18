@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <div id="divArray"> </div>
+        <textarea id="input"></textarea>
+        
+        <button id="addNum" onclick="addNum()">Add number</button>
+
+    </div>
+    <script>
+        document.body.onload = createArray;
+        var numbers = [2,3,5]
+        var arrayLength =4;
+        function createArray () {
+           
+            document.getElementById('divArray').innerHTML=numbers;
+        }
+        function addNum () {
+          
+            console.log(numbers);
+            var newArray = new Array(numbers.length +1);
+           // var newArray = new Array(arrayLength);
+           // arrayLength++;
+           
+            var num = document.getElementById('input').value;
+
+            for(var i = 0;i < numbers.length;i++){
+                newArray[i] = numbers[i];
+            }
+
+            newArray[numbers.length] = num;
+            document.getElementById('divArray').innerHTML=newArray;
+            numbers = newArray;
+        }
+             
+        
+    </script>
+</body>
+</html>

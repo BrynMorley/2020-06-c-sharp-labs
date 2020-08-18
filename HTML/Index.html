@@ -18,8 +18,23 @@
       }
       body{
           background-color: dimgray;
+          color:white;
       }
-      </style> 
+      .row{
+        background-color:rgb(56, 54, 54);
+        color:white;
+        font-size: 2em;
+        margin: 5px;
+        border-radius: 25px;
+      }
+      .ProfilePic{
+        width: 10em;
+      }
+      tr{
+        color:white;
+      }
+      
+      </style>
 </head>
 <body>
     <div class="Header">
@@ -31,16 +46,16 @@
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav">
                 <li class="nav-item active">
-                  <a class="nav-link" href="http://127.0.0.1:5500/Profiles.html">Home <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="/Index.html">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href='http://127.0.0.1:5500/SteamProfile.html'>Steam</a>
+                  <a class="nav-link" href='/SteamProfile.html'>Steam</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href='http://127.0.0.1:5500/RiotProfile.html'>Riot</a>
+                  <a class="nav-link" href='/RiotProfile.html'>Riot</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="http://127.0.0.1:5500/BlizzardProfile.html">Blizzard</a>
+                  <a class="nav-link" href="/BlizzardProfile.html">Blizzard</a>
                 </li>
               </ul>
             </div>
@@ -49,6 +64,17 @@
         
     <div class="container">
       <H1>Bryn's Profiles</H1>
+      <div class="row">
+        <a class="col-sm-4" href="/SteamProfile.html">
+          <img class="col-sm-12" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Steam_icon_logo.svg/600px-Steam_icon_logo.svg.png" >
+        </a>
+        <a class="col-sm-4" href="/RiotProfile.html">
+          <img  class="col-sm-12" src="https://www.riotgames.com/darkroom/800/da85e92aaf87f26181ded41afe03b1dc:aaeeccb4b282b616ef907ec68c40f2b7/lol-logo-rendered-hi-res.png" >
+        </a>
+        <a class="col-sm-4" href="/BlizzardProfile.html">
+          <img class="col-sm-12" src="https://cdn.freebiesupply.com/logos/large/2x/world-of-warcraft-logo-png-transparent.png" >
+        </a>
+      </div>
     </div> 
     
 </body>

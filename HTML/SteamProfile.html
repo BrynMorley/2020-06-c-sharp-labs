@@ -18,7 +18,22 @@
         }
         body{
             background-color: dimgray;
+            color:white;
         }
+        .row{
+          background-color:rgb(56, 54, 54);
+          color:white;
+          font-size: 2em;
+          margin: 5px;
+          border-radius: 25px;
+        }
+        .ProfilePic{
+          width: 10em;
+        }
+        tr{
+          color:white;
+        }
+        
         </style> 
     </head>
 <body>
@@ -32,7 +47,7 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                   <ul class="navbar-nav">
                     <li class="nav-item">
-                      <a class="nav-link" href="http://127.0.0.1:5500/Profiles.html">Home </a>
+                      <a class="nav-link" href="/Index.html">Home </a>
                     </li>
                     <li class="nav-item active">
                       <a class="nav-link" href='http://127.0.0.1:5500/SteamProfile.html'>Steam <span class="sr-only">(current)</span></a>
@@ -59,19 +74,18 @@
           <div class ="Data" id="Username">No data yet</div>
         </div>
         <div class="col-sm-6">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Steam_icon_logo.svg/600px-Steam_icon_logo.svg.png" id="AvatarImage">
+          <img class="ProfilePic" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Steam_icon_logo.svg/600px-Steam_icon_logo.svg.png" id="AvatarImage">
         </div>
       </div>
 
-      <table id="RecentlyPlayedTable" class="table table-striped">
+      <table class="table table-striped table-dark">
         <thead>
           <th>Name</th>
           <th>Time Played (2w)</th>
         </thead>
-        <tbody>
+        <tbody id="RecentlyPlayedTable" >
         
         </tbody>
-  
       </table>
     </div>
 
@@ -116,7 +130,7 @@ function bindGetPlayerSummariesButton(){
     for(var i =0; i< response.response.games.length;i++)
     {
       
-      var row = gamesTable.insertRow(i+1);
+      var row = gamesTable.insertRow(i);
       var name = row.insertCell(0);
       var time = row.insertCell(1);
 

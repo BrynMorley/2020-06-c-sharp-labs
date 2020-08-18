@@ -10,7 +10,7 @@ app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
 });
-
+app.get('',function(req,res){})
 // Here gets parameters from end of URL to use in api address.  These parameters will come from submit buttons 
 // on the respective sites
 app.get('/getnews', function(req, res) {
